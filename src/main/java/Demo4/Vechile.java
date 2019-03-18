@@ -1,49 +1,24 @@
 package Demo4;
 
-public class Vechile {
+public abstract class Vechile {
 
-    private String name;
-    private int  windows;
-    private int seats;
+    private String name = "Vechile: ";
 
 
-
-    public Vechile(String name, int windows, int seats) {
-        this.name = name;
-        this.windows = windows;
-        this.seats = seats;
+    public Vechile() {
     }
 
-    public String getName() {
+
+    public String vechName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public abstract String move();
+
+    public String toString()
+    {
+        return "This is a Abstract Class " + this.name;
+
     }
 
-    public int getWindows() {
-        return windows;
-    }
-
-    public void setWindows(int windows) {
-        this.windows = windows;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-
-    @Override
-    public String toString() {
-        return "Vechile{" +
-                "name='" + name + '\'' +
-                ", windows=" + windows +
-                ", seats=" + seats +
-                '}';
-    }
 }
